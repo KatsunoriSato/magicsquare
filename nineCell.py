@@ -26,16 +26,16 @@ def make_pattern(n, m = 0):
 出力する
 """
 def check15(ninecell):
-	if sum(ninecell[:3]) == 15:
-		if sum(ninecell[3:6]) == 15:
-			if sum(ninecell[6:]) == 15:
-				if sum(ninecell[::3]) == 15:
-					if sum(ninecell[1::3]) == 15:
-						if sum(ninecell[2::3]) == 15:
-							if ninecell[0] + ninecell[4] + ninecell[8] == 15:
-								if ninecell[2] + ninecell[4] + ninecell[6] == 15:
-									prtNinecell(ninecell)				
-									result.append(ninecell)
+	if sum(ninecell[:3]) == 15 and \
+	sum(ninecell[3:6]) == 15 and \
+	sum(ninecell[6:]) == 15 and \
+	sum(ninecell[::3]) == 15 and \
+	sum(ninecell[1::3]) == 15 and \
+	sum(ninecell[2::3]) == 15 and \
+	sum(ninecell[0::4]) == 15 and \
+	sum(ninecell[2:7:2]) == 15:
+		prtNinecell(ninecell)				
+		result.append(ninecell)
 	
 """
 9マスの内容に出力
